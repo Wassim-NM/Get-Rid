@@ -1,53 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
-        <title>Get Rid/ Add</title>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="style.css">
+        <title>Get Rid/ Add</title>
     </head>
 
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class='bx bxs-home-alt-2'></i></a></li>
+                    <li><a href="add.html">Add</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>
             <div class="elementholder">
                 <section class="elements">
-                    <h1>Weapon</h1>
+                    <h1>Start Selling</h1>
                     <hr>
                     <div class="container">
                         <div class="add-item" id="addItemBtn" onclick="showForm()">+ Add Item</div>
-                        <div class="item-form" id="itemForm">
+                        <div class="item-form" id="itemForm" style="display: none;">
                             <input type="file" id="itemImage" accept="image/*">
                             <input type="text" id="itemName" placeholder="Name">
                             <input type="number" id="itemPrice" placeholder="Price">
                             <input type="number" id="itemQuantity" placeholder="Quantity">
+                            <select id="itemCategory">
+                                <option value="" disabled selected>Categories</option>
+                                <option value="vehicles">Vehicles</option>
+                                <option value="weapon">Weapon</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="furniture">Furniture</option>
+                                <option value="pets">Pets</option>
+                            </select>
                             <textarea id="itemDescription" placeholder="Description"></textarea>
                             <button type="button" onclick="addItem()">Add</button>
                         </div>
                         <div id="itemList"></div>
                     </div>
                     <hr>
-                    <div class="contact-info">
-                        <h4><span>Contact us on:</span></h4>
-                        <img src="https://static.vecteezy.com/system/resources/previews/018/930/413/non_2x/instagram-logo-instagram-icon-transparent-free-png.png"
-                            alt="instagram icon">
-                        <a href="https://www.instagram.com/tacticalabosaddam?igsh=MWtyMWZrdjZ6cmhhcg=="
-                            target="_blank">Instagram</a>
-                        <img src="https://1000logos.net/wp-content/uploads/2017/02/Facebook-Logosu.png" alt="Facebook icon">
-                        <a href="https://www.facebook.com/share/155i9UyyQT/" target="_blank">Facebook</a>
-                        <img src="https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png"
-                            alt="Tiktok icon">
-                        <a href="https://www.tiktok.com/@tacticalabosaddam1?_t=ZS-8sp3KshNHOy&_r=1"
-                            target="_blank">Tiktok</a>
-                        <img src="https://static-00.iconduck.com/assets.00/whatsapp-icon-1977x2048-6lcnmyml.png"
-                            alt="WhatsApp icon">
-                        <a href="tel:+96171477274" target="_blank">WhatsApp</a>
-                    </div>
-                    </div>
+                    <a href="index.html">Back to Home</a>
                 </section>
             </div>
-            <a href="index.html">Home</a>
         </main>
+        <footer class="footer">
+            <p>&copy; 2025 Get Rid. All Rights Reserved.</p>
+        </footer>
         <script src="script.js" defer></script>
     </body>
 

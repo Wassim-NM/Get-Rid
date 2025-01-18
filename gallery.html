@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Get rid gallery</title>
+    <title>Get Rid Gallery</title>
 </head>
+
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class='bx bxs-home-alt-2'></i></a></li>
+                <li><a href="add.html">Add</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="gallery-main">
         <div class="categories">
-            <button class="category" data-category="all">All</button>
-            <button class="category" data-category="veicules">Veicules</button>
-            <button class="category" data-category="weapon">Weapon</button>
-            <button class="category" data-category="electronics">Electronics</button>
-            <button class="category" data-category="furniture">Furniture</button>
-            <button class="category" data-category="kitchen">Kitchen</button>
+            <button class="category" data-category="all"><i class="bx bx-layer"></i> All</button>
+            <button class="category" data-category="vehicles"><i class="bx bxs-car"></i> Vehicles</button>
+            <button class="category" data-category="weapon"><i class="bx bx-target-lock"></i> Weapon</button>
+            <button class="category" data-category="electronics"><i class="bx bx-tv"></i> Electronics</button>
+            <button class="category" data-category="furniture"><i class="bx bx-chair"></i> Furniture</button>
+            <button class="category" data-category="pets"><i class="bx bxs-dog"></i> Pets</button>
         </div>
-        <div class="gallery-container">
+        <div class="gallery-container" id="itemContainer">
             <div class="not-yet">
-                <h1>:-(</h1>
-                <h3>NO items yet !</h3>
+                <h1>:-</h1>
+                <h3>No items yet!</h3>
             </div>
-                <!-- Items will be loaded here -->
-            </div>
-        <a href="index.html">Home</a>
-
+        </div>
     </main>
+    <footer class="footer">
+        <p>&copy; 2025 Get Rid. All Rights Reserved.</p>
+    </footer>
     <script src="script.js" defer></script>
 </body>
+
 </html>
