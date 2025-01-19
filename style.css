@@ -84,8 +84,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
-    padding: 20px;
-    margin: 20px auto;
+    margin: 0 auto;
     background-color: transparent;
     display: flex;
     flex-wrap: wrap;
@@ -105,9 +104,7 @@ img {
 
 .item-form {
     display: none;
-    margin: 20px 0;
     background-color: transparent;
-    padding: 20px;
     border: 1px solid #000;
     border-radius: 5px;
 }
@@ -172,8 +169,10 @@ img {
 header nav ul {
     list-style: none;
     display: flex;
+    gap: 10px;
     padding: 10px;
-    background: #333;
+    background: #072442;
+
 }
 
 header nav ul li {
@@ -187,7 +186,8 @@ header nav ul li a {
 }
 
 .itemContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
@@ -197,9 +197,8 @@ header nav ul li a {
 .item {
     border: 1px solid #ccc;
     background: #fff;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-    width: 250px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -207,6 +206,12 @@ header nav ul li a {
 .item img {
     max-width: 100%;
     border-radius: 5px;
+}
+
+.itemInfo {
+    display: grid;
+    grid-column: auto auto auto auto;
+    column-gap: 20px;
 }
 
 .itemInfo h2 {
@@ -217,6 +222,7 @@ header nav ul li a {
 .itemInfo p {
     margin: 5px 0;
     font-size: 16px;
+    color: #333;
 }
 
 .add-item {
@@ -229,7 +235,7 @@ header nav ul li a {
 }
 
 .hero {
-    background-image: url('Assets/get-rid-hero.webp');
+    background-image: url('https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
@@ -266,7 +272,7 @@ header nav ul li a {
 .footer {
     position: fixed;
     bottom: 0;
-    background: #333;
+    background: #072442;
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -280,31 +286,49 @@ header nav ul li a {
 
 /* Add Page */
 .elementholder {
-    background: linear-gradient(45deg, #4e4376, #2b5876);
+    background: linear-gradient(45deg, #042443, #072442);
     width: 100%;
+    height: 100%;
 }
 
 .elements {
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    background: #161616;
+    width: 50%;
 }
 
+.contanier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
 /* Gallery */
+.gallery-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
 .categories {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
-    height: 100%;
+    height: 120px;
     width: 100%;
 }
 
 .categories .category {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
-    background: #007bff;
+    background: #072442;
     color: white;
     border-radius: 5px;
     padding: 10px 15px;
@@ -318,10 +342,10 @@ header nav ul li a {
 }
 
 .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 20px;
-    height: 100%;
+    height: 90%;
+    width: 100%;
 }
 
 .category {
@@ -335,16 +359,18 @@ header nav ul li a {
     background: #f8f9fa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-    height: 50%;
+    height: 100px;
     width: 50%;
 }   
 
 .item {
+    display: flex;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s;
+    height: 200px;
 }
 
 .item:hover {
@@ -352,7 +378,7 @@ header nav ul li a {
 }
 
 .item img {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #042443;
 }
 
 .item h2 {
@@ -364,3 +390,72 @@ header nav ul li a {
     margin: 5px;
 }
 
+.contact-me {
+    background-image: url('https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    height: 100%;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.contact-me h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+#contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+#contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    width: 100%;
+    color: black;
+    margin-bottom: 10px;
+    padding: 5px;
+}
